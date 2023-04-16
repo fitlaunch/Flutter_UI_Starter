@@ -133,19 +133,65 @@ class _LoginPageState extends State<LoginPage> {
 
                 const SizedBox(height: 50),
 
-                // google + apple sign in buttons
+                /// google + apple sign in buttons
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      // google button
+                      SquareTile(imagePath: 'lib/images/google.png'),
+
+                      SizedBox(width: 25),
+
+                      // apple button
+                      SquareTile(imagePath: 'lib/images/apple.png')
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 35),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    // google button
-                    SquareTile(imagePath: 'lib/images/google.png'),
-
-                    SizedBox(width: 25),
-
-                    // apple button
-                    SquareTile(imagePath: 'lib/images/apple.png')
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 10),
+                    ),
+                    Expanded(
+                      child: Divider(
+                        thickness: 0.5,
+                        color: Colors.grey[400],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: RichText(
+                        textScaleFactor: .9,
+                        textAlign: TextAlign.center,
+                        text: TextSpan(
+                          text: 'Create an Account ',
+                          style: TextStyle(color: Colors.grey.shade700),
+                          children: <TextSpan>[
+                            TextSpan(
+                              text: 'with Email and Password',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.grey.shade700),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Divider(
+                        thickness: 0.5,
+                        color: Colors.grey[400],
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 10),
+                    ),
                   ],
                 ),
+                const SizedBox(height: 20),
               ],
             ),
           ),

@@ -24,22 +24,33 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 10.0),
         child: Column(
           children: [
-            Expanded(
-              child: ListView.builder(
-                itemCount: 10,
-                itemBuilder: (context, index) => Container(
-                  height: 200,
-                  margin: const EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black38, width: 3),
-                    borderRadius: BorderRadius.circular(8),
-                    color: Colors.grey[200],
-                  ),
-                ),
-              ),
-            ),
+            const VertList(),
             HorzList(controller: _controller),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class VertList extends StatelessWidget {
+  const VertList({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: ListView.builder(
+        itemCount: 10,
+        itemBuilder: (context, index) => Container(
+          height: 200,
+          margin: const EdgeInsets.all(10),
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.black38, width: 3),
+            borderRadius: BorderRadius.circular(8),
+            color: Colors.grey[200],
+          ),
         ),
       ),
     );
