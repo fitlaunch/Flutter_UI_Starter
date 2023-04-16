@@ -31,7 +31,7 @@ class _MainLandingState extends State<MainLanding> {
   }
 
   final List<Widget> _pages = [
-    const HomePage(),
+    HomePage(),
     const ShopPage(),
     const ProfilePage(),
     const SettingPage(),
