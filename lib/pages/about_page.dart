@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:startertemplate/components/the_app_bar.dart';
 
 /*
-
 A B O U T P A G E
-
 */
 
 class AboutPage extends StatelessWidget {
@@ -11,16 +10,11 @@ class AboutPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.grey[300],
-        elevation: 0,
-        title: Text(
-          'A B O U T',
-          style: TextStyle(color: Colors.grey[800]),
-        ),
+    return const Scaffold(
+      appBar: TheAppBar(
+        title: 'ABOUT',
       ),
-      body: const Center(child: Text('this app was designed for..')),
+      body: Center(child: Text('this app was designed for..')),
     );
   }
 }

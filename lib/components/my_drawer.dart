@@ -4,10 +4,8 @@ import 'package:startertemplate/pages/login_page.dart';
 import '../pages/about_page.dart';
 
 /*
-
 D R A W E R
 From the top left menu icon.
-
 */
 
 class MyDrawer extends StatelessWidget {
@@ -23,7 +21,7 @@ class MyDrawer extends StatelessWidget {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => LoginPage(),
+        builder: (context) => const LoginPage(),
       ),
     );
   }

@@ -1,13 +1,5 @@
 import 'package:flutter/material.dart';
 
-/*
-
-S E T T I N G P A G E
-This is the SettingPage.
-Currently it is just showing a vertical list of boxes.
-
-*/
-
 class SettingPage extends StatelessWidget {
   const SettingPage({super.key});
 

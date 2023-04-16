@@ -8,7 +8,7 @@ email and password fields when we log them in
 */
 
 class MyTextField extends StatelessWidget {
-  final controller;
+  final TextEditingController controller;
   final String hintText;
   final bool obscureText;
 
