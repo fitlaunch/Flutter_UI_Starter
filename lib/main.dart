@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:startertemplate/pages/login_page.dart';
+import 'package:startertemplate/pages/app_routes.dart';
 import 'package:startertemplate/providers/active_theme_provider.dart';
 
 import 'constants/themes.dart';
@@ -24,7 +24,9 @@ class MyApp extends ConsumerWidget {
       theme: lightTheme,
       darkTheme: darkTheme,
       themeMode: activeTheme == Themes.dark ? ThemeMode.dark : ThemeMode.light,
-      home: const LoginPage(),
+      initialRoute: AppRoutes.splashScreen,
+      onGenerateRoute: AppRoutes.onGenerateRoute,
+      //home: const LoginPage(),
     );
   }
 }
